@@ -30,20 +30,32 @@ Q12)
 
 Q13)
     A: 32           integer map to string representation
-    B: 1            
-    C: 3            
-    D: 3null        
-    E: 4            
-    F: 0            
-    G: 3undefined   
-    H: nan          
+    B: 1            string is converted to integer 
+    C: 3            null returns nothing
+    D: 3null        null is converted as string representation
+    E: 4            true maps to 1
+    F: 0            false maps to 0, and null returns nothing
+    G: 3undefined   undefined maps to string representation
+    H: NaN          string and undefined both gives NaN in numeric conversion
 
 Q14)
-    A: true
-    B: false
-    C: true
-    D: false
-    E: false
-    F: true
+    A: true         string '2' becomes number 2
+    B: false        two string comparison compares first character
+    C: true         '2' becomes number 2
+    D: false        two different data types returns fall.
+    E: false        true is 1, 1 =/= 2
+    F: true         both are boolean type true.
 
-Q15) 
+Q15) === checks the equality without type conversion. If different types are compared, it will automatically return false.
+
+
+Q17) Inside modifyArray function, it creates newArr[]. In for loop, it calls doSomething function with elemnts of array and push to newArr[].
+        doSomethings takes elements [1,2,3] and multiply by 2, so it returns 2,4,6, which are pushed to newArr.
+        Hence, it returns newArr with values [2,4,6].
+
+
+Q19) 
+    1
+    4
+    3
+    2
